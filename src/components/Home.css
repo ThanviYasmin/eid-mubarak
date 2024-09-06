@@ -1,0 +1,401 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #6C3CAF; /* Default lavender background */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Navbar Container */
+.navbar-container {
+  position: relative;
+  width: 100%;
+  height: 220px;
+}
+
+.navbar-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.navbar-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.switch-container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding:30px;
+}
+
+.logo {
+  width: 160px;
+  position: absolute;
+  top: 50px;
+  left: 580px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 50px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  color: #fff;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+  width: 50px;
+  height: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Eid Mubarak Section */
+.eid-mubarak-container {
+  position: relative;
+  text-align: center;
+  margin-top: 150px; /* Adjusted spacing to move jug and cup higher */
+}
+
+.eid-mubarak {
+  width: 330px; /* Initial size */
+  margin: 0 auto;
+  transition: transform 0.5s ease;
+  position: relative;
+}
+
+.jug-cup-container {
+  position: absolute;
+  top: -70px; /* Adjusted positioning */
+  left: -60px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.jug {
+  width: 220px;
+  height: 220px;
+  transition: transform 0.5s ease;
+}
+
+.cup-coffee {
+  margin-top: 100px;
+}
+
+.cup {
+  width: 150px;
+  transition: transform 0.5s ease;
+}
+
+/* Shining Star */
+.shining-star {
+  position: absolute;
+  top: -100px; /* Adjusted positioning to start the star higher */
+  right: 250px;
+  width: 50px;
+  transition: transform 0.5s ease;
+  animation: shine 1s infinite; /* Added animation for shining effect */
+}
+
+@keyframes shine {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+/* Celebration Images */
+.celebration-container {
+  position: relative;
+  margin-top: -100px;
+  text-align: center;
+  width: 100%;
+  padding: 0;
+}
+
+.celebration-image {
+  width: 100%;
+  transition: transform 0.5s ease;
+  padding: 0;
+}
+
+.second-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  height: auto;
+  padding: 0; /* Removed negative padding */
+  margin-top: -250px; /* Adjusted margin-top to reduce gap */
+  margin-left: -100px;
+}
+
+.third-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  height: auto;
+  padding: -10px;
+   /* Removed negative padding */
+}
+
+.text-box2,.text-box {
+  display: flex;
+  padding:10px;
+  padding-left: 0px;
+  font-weight: normal;
+  flex-direction: column;
+  align-items: center;
+  font-family: Space Grotesk, sans-serif;
+  color: white; /* White text color */
+  font-size: 30px; /* Adjust font size as needed */
+  margin-top: 0; /* Removed margin-top */
+}
+
+.submit-button {
+  background-color:#f5c547;
+  color: #514f53;
+  padding: 10px 40px; /* Increase the size of the button */
+  border: none;
+  border-radius: 19px;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 18px; /* Optional: Increase font size for better readability */
+  box-shadow: 0 0 10px 3px rgb(233, 218, 218); /* Pink glow effect */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: whitesmoke;
+}
+
+/* Side Images */
+.side-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.lamp-image {
+  width: 250px; /* Adjusted size */
+  margin-bottom: 200px; /* Moved lamp image up */
+}
+
+.wave-image {
+  position: absolute;
+  left: -950px; /* Start position to ensure only a small part is visible initially */
+  width: 900px; /* Width of the wave image */
+  height: auto; /* Maintain aspect ratio */
+  top: 890px;
+  display: block;
+  transform: rotate(-10deg); /* Static rotation */
+  transition: transform 0.2s ease-in-out;
+  z-index: 1;
+}
+.red-wave-image{
+  position:relative;/* Start position to ensure only a small part is visible initially */
+  width: 800px; /* Width of the wave image */
+  height: auto; /* Maintain aspect ratio */
+  top: -300px;
+  display: block;
+  transform: rotate(-10deg); /* Static rotation */
+  transition: transform 0.2s ease-in-out;
+  z-index: 1;
+  right:-50px;
+}
+
+.shining-star2{
+  padding:0px;
+  margin-top: -50px;
+  margin-left: 400px;
+}
+
+.shining-star-kite {
+  
+   /* Adjusted positioning to start the star higher */
+   width: 100px; /* Adjust width */
+   height: 110px; 
+  transition: transform 0.5s ease;
+  animation: shine 1s infinite; /* Added animation for shining effect */
+}
+
+@keyframes shine {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+@keyframes kiteMovement {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Adjust this value to control the height of the kite movement */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.kite-image {
+  left:150px;
+  width: 150px; /* Adjusted size */
+  transition: transform 0.2s ease-in-out;
+  animation: kiteMovement 2s ease-in-out infinite; /* Adjust duration and easing as needed */
+  position: relative;
+  z-index: 2; /* Higher z-index to ensure it is above other elements */
+
+}
+
+@keyframes kiteFloat {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg); /* Start position */
+  }
+  25% {
+    transform: translate3d(-5px, -15px, 0) rotate(-2deg); /* Move up and to the left with slight rotation */
+  }
+  50% {
+    transform: translate3d(0, -30px, 0) rotate(0deg); /* Move up with no rotation */
+  }
+  75% {
+    transform: translate3d(5px, -15px, 0) rotate(2deg); /* Move up and to the right with slight rotation */
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg); /* Return to start position */
+  }
+}
+
+@keyframes rotateAndFloat {
+  0% {
+    transform: rotate(0deg) translateY(0); /* Initial state */
+  }
+  50% {
+    transform: rotate(30deg) translateY(-20px); /* Rotate and move up */
+  }
+  100% {
+    transform: rotate(0deg) translateY(0); /* Rotate back and return to initial position */
+  }
+}
+
+.akbar-image {
+  width: 350px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 10px; /* Adjust spacing if needed */
+  position: absolute;
+  right: 0; /* Aligns the image to the right edge of the container */
+  top: -10;
+}
+.akbar-container{
+  transform: rotate(30deg);
+  position: relative; 
+}
+
+.pink-balloon{
+  width: 155px; /* Adjust the size of the kite */
+  animation: kiteFloat 6s linear infinite; /* Smooth, continuous movement */
+  z-index: 2;
+  position: relative; /* Allows precise positioning */
+  left: -350px; /* Horizontal position from the left edge */
+  top: 150px; /* Vertical position from the top edge */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.5s ease;
+}
+
+.green-balloon{
+  width: 195px; /* Adjust the size of the kite */
+  animation: kiteFloat 6s linear infinite; /* Smooth, continuous movement */
+  z-index: 2;
+  position: relative; /* Allows precise positioning */
+  left: -550px; /* Horizontal position from the left edge */
+  top: -40px; /* Vertical position from the top edge */
+  height: auto; 
+}
+
+.button-group {
+  position: relative;
+  margin-bottom: 120px; /* Adjust this to move the group upwards */
+}
+
+.button-group button {
+  margin: 0 10px; /* Adjust this to control the gap between buttons */
+}
+
+/* Home.css */
+
+/* Loader container */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff; /* Or any background color you prefer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* Ensure it appears on top of everything else */
+}
+
+/* Loader image */
+.loader-image {
+  width: 300px; /* Adjust size as needed */
+  height: 300px;
+  animation: rotate 5s linear infinite;
+}
+
+/* Rotation animation */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+

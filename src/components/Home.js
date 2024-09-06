@@ -5,7 +5,7 @@ import Loading from './loading'; // Import the Loading component
 
 // Import other assets and components...
 import nightOverlay from '../assets/images/nightOverlay.8d73d967be2b8afb26bf.png';
-import EGA_Logo from '../assets/images/EGA_Logo_Night.a4a935c9fcf0f2de8375.png';
+import EGA_Logo from '../assets/images/Eid al-Adha logo template social media illustration.png';
 import jugImage from '../assets/images/preparationJug.1698288d79715908e659.png';
 import coffeeImage from '../assets/images/33-layer.dacfa914a6d951891f89.png';
 import eidMubarakImage from '../assets/images/preparationEnTxtNight.cd6ca912ad87279915ef.png';
